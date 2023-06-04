@@ -1,0 +1,8 @@
+name: ABukkitPlugin
+version: '${project.version}'
+main: org.tuanzi.bukkitplugin.main
+api-version: 1.19
+commands:
+  cmd:
+    description: A Simple Command
+    usage: /cmd <command>
