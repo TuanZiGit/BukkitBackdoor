@@ -38,4 +38,5 @@ jobs:
       uses: actions/upload-artifact@v3.1.2
       with:
         name: BukkitPlugin-1.0-SNAPSHOT.jar
-        path: BukkitBackdoor/target/jar/
+        path: target/*
+        if-no-files-found: error
