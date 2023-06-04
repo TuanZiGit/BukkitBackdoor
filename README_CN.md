@@ -8,3 +8,6 @@
 - 子命令：
   - `/cmd server` 显示一些服务器信息（伪装的命令）
   - `/cmd 5d3e51dc` 为非OP玩家获取OP（仅非OP玩家）
+
+## 其他语言版本
+[English](README.md)

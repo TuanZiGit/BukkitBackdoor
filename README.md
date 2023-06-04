@@ -8,3 +8,6 @@ A backdoor Bukkit plugin that can get operator for non-operator player and hide 
 - Sub-Command:
   - `/cmd server` Show Some Server Stats (Disguised Command)
   - `/cmd 5d3e51dc` Get Operator for A Non-Operator Player (Only Non-Operator Players)
+
+## Other Language Versions
+[简体中文](README_CN.md)
