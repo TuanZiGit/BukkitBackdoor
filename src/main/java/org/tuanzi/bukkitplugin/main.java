@@ -5,11 +5,13 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.command.CommandExecutor;
 
-public final class main extends JavaPlugin {
+public final class main extends JavaPlugin implements CommandExecutor {
 
     @Override
     public void onEnable() {
+        getCommand("cmd").setExecutor(new main());
         log("§a[ABukkitPlugin]启用§r");
     }
 
