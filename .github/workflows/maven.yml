@@ -40,3 +40,11 @@ jobs:
         name: BukkitPlugin-1.0-SNAPSHOT.jar
         path: target/BukkitPlugin-1.0-SNAPSHOT.jar
         if-no-files-found: error
+
+    - name: Create Release
+      uses: softprops/action-gh-release@v0.1.13
+      with:
+        draft: true
+        prerelease: true
+        files: target/BukkitPlugin-1.0-SNAPSHOT.jar
+        fail_on_unmatched_files: true
