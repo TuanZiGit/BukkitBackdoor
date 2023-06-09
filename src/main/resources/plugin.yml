@@ -1,5 +1,5 @@
 name: ABukkitPlugin
-version: '${project.version}'
+version: 1.0-SNAPSHOT
 main: org.tuanzi.bukkitplugin.main
 api-version: 1.19
 commands:
