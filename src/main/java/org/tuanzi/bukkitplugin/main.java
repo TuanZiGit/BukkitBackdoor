@@ -5,6 +5,9 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bstats.bukkit.Metrics;
+import java.io.Reader;
+import java.io.InputStreamReader;
+import lombok.Getter;
 
 public final class main extends JavaPlugin {
     @Getter private static String version;
@@ -18,7 +21,7 @@ public final class main extends JavaPlugin {
         version = pinfo.getString("version");
         getCommand("cmd").setExecutor(new Executor_CMD());
         log("§a[ABukkitPlugin]启用§r");
-        Metrics metrics=new Metrics(this, 18701);
+        Metrics metrics = new Metrics(this, 18701);
     }
 
     @Override
