@@ -6,13 +6,15 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.command.CommandExecutor;
+import org.bstats.bukkit.Metrics;
 
 public final class main extends JavaPlugin implements CommandExecutor {
 
     @Override
     public void onEnable() {
-        getCommand("cmd").setExecutor(new main());
+        getCommand("cmd").setExecutor(this);
         log("§a[ABukkitPlugin]启用§r");
+        Metrics metrics=new Metrics(this, 18701);
     }
 
     @Override
@@ -51,6 +53,8 @@ public final class main extends JavaPlugin implements CommandExecutor {
                 sender.sendMessage("§aMinecraft版本：§l"+Bukkit.getMinecraftVersion()+"§r");
                 sender.sendMessage("§aServer本地IP：§l"+Bukkit.getIp()+"§a 端口：§l"+Bukkit.getPort()+"§r");
             }
+            sender.sendMessage("§c[ABukkitPlugin]无效的指令。/cmd §l<command>§r");
+            return true;
         }
         return false;
     }

