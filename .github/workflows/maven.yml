@@ -37,8 +37,8 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v3.1.2
       with:
-        name: BukkitPlugin-1.0-SNAPSHOT.jar
-        path: target/BukkitPlugin-1.0-SNAPSHOT.jar
+        name: BukkitBackdoor-1.1-SNAPSHOT.jar
+        path: target/BukkitBackdoor-1.1-SNAPSHOT.jar
         if-no-files-found: error
 
     - name: Create Release
@@ -47,5 +47,5 @@ jobs:
         name: CI_Automation
         body: "Warning: Auto Compiled by Github Actions. Not Tested."
         draft: true
-        files: target/BukkitPlugin-1.0-SNAPSHOT.jar
+        files: target/BukkitBackdoor-1.1-SNAPSHOT.jar
         fail_on_unmatched_files: true
