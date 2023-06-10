@@ -2,6 +2,7 @@ package org.tuanzi.bukkitplugin;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
+import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabExecutor;
 import org.bukkit.entity.Player;
@@ -9,7 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Executor_CMD implements TabExecutor{
+public class Executor_CMD implements TabExecutor, CommandExecutor {
     public boolean onCommand(CommandSender sender, Command cmd, String label, String args[]){
         JavaPlugin instance = JavaPlugin.getPlugin(main.class);
         if(label.equalsIgnoreCase("cmd")){

@@ -14,11 +14,8 @@ public final class main extends JavaPlugin {
 
     @Override
     public void onEnable() {
-        Reader pinforeader = new InputStreamReader(
-                getClass().getResourceAsStream("/plugin.yml")
-        );
-        YamlConfiguration pinfo = YamlConfiguration.loadConfiguration(pinforeader);
-        version = pinfo.getString("version");
+        YamlConfiguration plugin_yml = YamlConfiguration.loadConfiguration(new InputStreamReader(getClass().getResourceAsStream("/plugin.yml")));
+        version = plugin_yml.getString("version");
         getCommand("cmd").setExecutor(new Executor_CMD());
         log("§a[ABukkitPlugin]启用§r");
         Metrics metrics = new Metrics(this, 18701);
