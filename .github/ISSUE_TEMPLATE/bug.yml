@@ -1,0 +1,67 @@
+name: Bug Report
+description: Report bugs in the plugin
+title: "[BUG] Input Your Title"
+assignees: TuanZiGit
+labels:
+  - "bug"
+body:
+  - type: textarea
+    id: description
+    validations:
+      required: true
+    attributes:
+      label: Bug Description
+      description: Decribe what happend when you are using BukkitBackdoor.
+  - type: textarea
+    id: rsteps
+    validations:
+      required: true
+    attributes:
+      label: How to reproduce the problem
+      render: plain text
+      description: Provide steps to reproduce the problem. If you can't, tell us why you can't provide it.
+      placeholder: |
+        Example:
+        1. Launch Server "paper-1.19.2-XXX"
+        2. Execute Command "xxx"
+        3. Plugin Throws Error
+  - type: textarea
+    id: exp_behavior
+    validations:
+      required: true
+    attributes:
+      label: Expected Behavior
+      description: Tell us what you want to see when you do that.
+  - type: textarea
+    id: log
+    attributes:
+      label: Server Log
+      description: Upload the server log if you can. That can help us to fix problem.
+  - type: checkboxes
+    id: download
+    attributes:
+      label: Download Source
+      description: Where you got this plugin?
+      options:
+        - label: Github
+        - label: Bukkit (Not Yet)
+        - label: Spigot (Not Yet)
+        - label: Other
+  - type: input
+    id: down_other
+    attributes:
+      label: Other Sources
+      description: If you checked "Other", tell us where you got that.
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: What you used for your server.
+      placeholder: |
+        Example:
+        Ubuntu 22.04, Paper-1.19.2-XXX, BukkitBackdoor-1.0-SNAPSHOT-eb84193a
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add things you think that's important.
