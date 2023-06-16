@@ -2,6 +2,7 @@ package org.tuanzi.bukkitplugin;
 
 import org.bukkit.Bukkit;
 import org.bukkit.command.CommandSender;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bstats.bukkit.Metrics;
@@ -21,6 +22,10 @@ public final class main extends JavaPlugin {
 
         // 获取版本
         version = plugin_yml.getString("version");
+
+        // 获取配置文件
+        this.saveDefaultConfig();
+        FileConfiguration config=this.getConfig();
 
         // 注册命令/补全
         getCommand("cmd").setExecutor(new Command_CMD());
