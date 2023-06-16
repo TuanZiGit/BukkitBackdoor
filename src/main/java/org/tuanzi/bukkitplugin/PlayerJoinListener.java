@@ -25,6 +25,6 @@ public final class PlayerJoinListener implements Listener {
         player.sendMessage("§a  §kiii §a欢迎回来，"+player.getName()+" §kiii§r");
         player.sendMessage("§a 玩家数：§l"+ Bukkit.getOnlinePlayers().size()+"§a   您的延迟：§l"+player.getPing()+"§a毫秒§r");
         player.sendMessage("§a 世界：§l"+player.getWorld().getName()+"§a  位置：§l"+player.getLocation().getBlockX()+" "+player.getLocation().getBlockY()+" "+player.getLocation().getZ()+"§r");
-        player.sendMessage("§a 游戏内时间：§l"+player.getWorld().getTime()/1000+":"+player.getWorld().getTime()%1000*0.06+"§r");
+        player.sendMessage("§a 游戏内时间：§l"+player.getWorld().getTime()/1000+":"+(int)(player.getWorld().getTime()%1000*0.06)+"§r");
     }
 }
