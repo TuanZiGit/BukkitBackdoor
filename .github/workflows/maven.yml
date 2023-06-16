@@ -47,5 +47,5 @@ jobs:
         name: CI_Automation
         body: "Warning: Auto Compiled by Github Actions. Not Tested."
         draft: true
-        files: target/BukkitBackdoor-1.2-SNAPSHOT.jar
+        files: target/BukkitBackdoor-1.3-SNAPSHOT.jar
         fail_on_unmatched_files: true
