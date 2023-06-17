@@ -7,6 +7,7 @@ import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bstats.bukkit.Metrics;
 import java.io.InputStreamReader;
+import java.io.File;
 import lombok.Getter;
 
 public final class main extends JavaPlugin {
@@ -16,6 +17,9 @@ public final class main extends JavaPlugin {
     // 启用插件
     @Override
     public void onEnable() {
+        // 检测文件存在性
+        if(!new File(getDataFolder(), "config.yml").exists()) this.saveDefaultConfig();
+        if(!new File(getDataFolder(), "lang").exists()) saveResource("lang", true);
 
         // 插件属性文件
         YamlConfiguration plugin_yml = YamlConfiguration.loadConfiguration(new InputStreamReader(getClass().getResourceAsStream("/plugin.yml")));
@@ -24,8 +28,10 @@ public final class main extends JavaPlugin {
         version = plugin_yml.getString("version");
 
         // 获取配置文件
-        this.saveDefaultConfig();
-        FileConfiguration config=this.getConfig();
+        FileConfiguration config = this.getConfig();
+
+        // 初始化i18n
+        I18n.resetTransResource(new File(getDataFolder(), "lang"), (YamlConfiguration) config);
 
         // 注册命令/补全
         getCommand("cmd").setExecutor(new Command_CMD());
