@@ -17,6 +17,7 @@ public final class PlayerQuitListener implements Listener {
         Player player = event.getPlayer();
 
         // 发送退出服务器信息（例：玩家 114514 咆哮着退出了服务器。）
-        event.setQuitMessage("§e玩家 §l"+player.getName()+"§e 咆哮着退出了服务器。");
+        //event.setQuitMessage("§e玩家 §l"+player.getName()+"§e 咆哮着退出了服务器。");
+        event.setQuitMessage(I18n.getFormattedTranslate(I18n.getTranslate("msg.quit"), player));
     }
 }

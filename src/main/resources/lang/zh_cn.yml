@@ -1,13 +1,30 @@
+welcome: 
+  - "§a[ABukkitPlugin]版本：§l$VERSION$§r"
+  - "§a  §kiii §a欢迎回来，$PLAYER$ §kiii§r"
+  - "§a 玩家数：§l$ONLINE$§a   您的延迟：§l$PING$§a毫秒§r"
+  - "§a 世界：§l$WORLD$§a  位置：§l$X$ $Y$ $Z$§r"
+  - "§a 游戏内时间：§l$TIME$§r"
+serverinfo:
+  - "§a[ABukkitPlugin]版本：§l$VERSION$§r"
+  - "§aBukkit版本：§l$BUKKIT$§r"
+  - "§aServer版本：§l$SERVER$§r"
+  - "§aMinecraft版本：§l$MINECRAFT$§r"
+  - "§aServer本地IP：§l$IP$§a 端口：§l$PORT$§r"
+  - "§a人数：§l$ONLINE$§r"
+  - "§aMSPT：§l$MSPT$§r"
 help:
-  title:
-  help:
-  server:
-  version:
-server:
-  title:
-  bukver:
-  srvver:
-  minver:
-  srvip:
-  players:
-  avgmspt:
+  - "§a[ABukkitPlugin]版本：§l$VERSION$§r"
+  - "§a  /cmd help|? 显示此页面§r"
+  - "§a  /cmd server|srv 显示服务器信息§r"
+  - "§a  /cmd version|ver 显示插件版本§r"
+msg: 
+  join: "§e玩家 §l$PLAYER$§e 阴暗地爬行着进入了服务器。"
+  quit: "§e玩家 §l$PLAYER$§e 咆哮着退出了服务器。"
+  version: "§a[ABukkitPlugin]版本：§l$VERSION$§r"
+cmd:
+  invaildcommand: "§c[ABukkitPlugin]无效的指令。/cmd §l<command>§r"
+  setop: "§a[GetOperator]成功获取§l管理员§a权限，请谨慎操作。§o(4)§r"
+  noplayer: "§c[ABukkitPlugin]控制台/命令方块不可以运行此指令。/§lcmd §c<command>§r"
+plugin:
+  enable: "§a[ABukkitPlugin]启用成功！§r"
+  disable: "§c[ABukkitPlugin]已禁用！§r"

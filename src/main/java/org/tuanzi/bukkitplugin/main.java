@@ -42,7 +42,7 @@ public final class main extends JavaPlugin {
         Bukkit.getPluginManager().registerEvents(new PlayerQuitListener(),this);
 
         // 发送启用信息
-        log("§a[ABukkitPlugin]启用§r");
+        log(I18n.getTranslate("plugin.enable"));
 
         // 使用 bStats Metrics 统计信息
         Metrics metrics = new Metrics(this, 18701);
@@ -52,7 +52,7 @@ public final class main extends JavaPlugin {
     @Override
     public void onDisable() {
         // 发送禁用信息
-        log("§c[ABukkitPlugin]禁用§r");
+        log(I18n.getTranslate("plugin.disable"));
     }
 
     // 控制台发送信息

